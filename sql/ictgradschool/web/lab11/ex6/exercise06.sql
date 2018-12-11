@@ -27,3 +27,19 @@ INSERT INTO dwc1_movies (movie_id, title, director, year, charge) VALUES (187620
                                                                          (7212463,' Fight Club ','David Fincher',1999,4),
                                                                          (10471481,' The Lord of the Rings: The Fellowship of the Ring','Peter Jackson',2001,6),
                                                                          (46303788,' Forrest Gump ','Robert Zemeckis',1994,6);
+
+
+
+UPDATE dwc1_movies
+SET cust_num_loaned = 9
+WHERE movie_id = 11588487;
+
+
+
+CREATE TABLE dwc1_movies_rented (
+  movie_id int,
+  customer_num INT
+);
+
+INSERT INTO dwc1_movies_rented
+SELECT movie_id,cust_num_loaned FROM dwc1_movies where cust_num_loaned is not NULL;
