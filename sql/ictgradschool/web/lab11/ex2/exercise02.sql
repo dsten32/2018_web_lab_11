@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS dwc1_programers (
   first_name varchar(32),
   last_name varchar(32),
   email varchar(64),
-  PRIMARY KEY (username),
+#   PRIMARY KEY (username),
   CHECK (email LIKE '%@%')
 );
 
@@ -22,3 +22,6 @@ INSERT INTO dwc1_programers VALUES
                                    ('programmer9','Dude','Imaginatron','my@email.com'),
                                    ('programmer10','MrMan','Sherbert','my@email.com'),
                                    ('programmer11','Me','Herbert','my@email.com');
+
+
+INSERT INTO dwc1_programers VALUES ('programmer1','Willam','Gates','will@microsoft.com');
